@@ -1,0 +1,27 @@
+{
+  "name": "bdd",
+  "version": "1.0.0",
+  "description": "https://dev.to/ynmanware/bdd-for-rest-api-using-cucumber-js-2pol",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 && node ./report.js",
+    "directory-service": "cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --tags '@gaji_gesa'",
+    "report": "node ./report.js",
+    "gaji_gesa": "(yarn directory-service && yarn report) || yarn report"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "faker": "^5.1.0",
+    "lodash": "^4.17.20",
+    "dotenv-flow": "^3.2.0"
+  },
+  "devDependencies": {
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "description": "  In order to have improve user engagement\n  As a user\n  I want to make transactions to earn points",
+    "keyword": "Feature",
+    "name": "Gaji Gesa API Points Feature",
+    "line": 2,
+    "id": "gaji-gesa-api-points-feature",
+    "tags": [],
+    "uri": "src/features/gaji_gesa_points.feature",
+    "elements": [
+      {
+        "id": "gaji-gesa-api-points-feature;as-an-existing-user-i-want-to-add-point(s)-to-employee",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "As an existing user I want to add point(s) to employee",
+        "tags": [
+          {
+            "name": "@gaji_gesa",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I have an existing user",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "[request body] {\n    \"loginType\": \"SMS_OTP\",\n    \"mobileNumber\": \"6282218622827\",\n    \"messagingType\": \"SMS\"\n}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I login to Gaji Gesa",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 367000000
+            },
+            "embeddings": [
+              {
+                "data": "[method] post",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "[url] https://apiv2-staging.gajigesa.com/auth/login",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "[headers] {\n    \"Content-Type\": \"application/json\",\n    \"Accept\": \"application/json\",\n    \"x-api-key\": 12345678,\n    \"User-Agent\": \"PostmanRuntime/7.29.0\"\n}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "[request body] {\"loginType\":\"SMS_OTP\",\"mobileNumber\":\"6282218622827\",\"messagingType\":\"SMS\"}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "user get OTP response code 201",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the user have the otp token",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "user has to confirm OTP",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "the user sends the OTP confirmation",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 267000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "client access token is created",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I add GG points to employee",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I submit add point request",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:112"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "user has new GG points",
+            "match": {
+              "location": "src/steps/gaji_gesa_points.js:117"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
