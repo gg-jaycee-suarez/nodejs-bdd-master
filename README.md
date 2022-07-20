@@ -14,7 +14,7 @@ json-server --watch db.json
 
 #### start test 
 ```
-npm run directory-service-bdd
+npm run gaji_gesa
 ```
 
 For more information on Cucumber.js refer 
